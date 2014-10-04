@@ -12,7 +12,7 @@ from sparkperf.config_utils import FlagSet, JavaOptionSet, OptionSet, ConstantOp
 
 #hostname of namenode
 
-NAME_NODE = "dgbm07-masternode1"
+NAME_NODE = "NAMENODE-1"
 # Point to an installation of Spark on the cluster.
 SPARK_HOME_DIR = "/usr/lib/spark-yarn"
 # TODO: If we drop the disk warm-up, we could limit the scope of this to only when using
@@ -29,7 +29,7 @@ SPARK_CLUSTER_URL = "yarn-cluster"
 USE_CLUSTER_SPARK = True
 
 # URL of the HDFS installation in the Spark EC2 cluster
-HDFS_URL = "hdfs://dgbm07-masternode1:8020/test/"
+HDFS_URL = "hdfs://" + NAME_NODE + ":8020/test/"
 #HDFS_URL = "hdfs://%s:9000/test/" % socket.gethostname()
 # HDFS_URL = "%s/test/" % os.getcwd()
 
